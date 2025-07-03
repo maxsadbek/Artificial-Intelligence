@@ -1,3 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
 
+body {
+  background-color: #0e1b2f;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+header .navbar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header .navbar .logo h3 {
+  font-size: 18px;
+  color: #3B82F6;
+}
+header .navbar .navbar_menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+  gap: 3rem;
+}
+header .navbar .navbar_menu ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+header .navbar .navbar_button button {
+  padding: 14px 1.5rem;
+  font-size: 16px;
+  border-radius: 7px;
+  color: #FFFFFF;
+  background-color: #3B82F6;
+  border: none;
+}
+header .navbar #menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    width: 99%;
+  }
+  header .navbar .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 10px;
+  }
+  header .navbar .logo img {
+    width: 40px;
+  }
+  header .navbar .logo h3 {
+    font-size: 15px;
+    color: #3B82F6;
+  }
+  header .navbar .navbar_menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    display: none;
+    font-size: 18px;
+    gap: 3rem;
+  }
+  header .navbar .navbar_menu ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  header .navbar .navbar_button button {
+    padding: 14px 1.5rem;
+    font-size: 16px;
+    border-radius: 7px;
+    color: #FFFFFF;
+    background-color: #3B82F6;
+    border: none;
+    display: none;
+  }
+  header .navbar #menu {
+    display: block;
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

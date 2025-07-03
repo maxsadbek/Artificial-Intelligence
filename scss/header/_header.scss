@@ -1,0 +1,109 @@
+@use './../mixin';
+@use'../variables' as*;
+
+header {
+    .navbar {
+        @include mixin.flex-between;
+        padding: 2rem 0;
+
+        .logo {
+            @include mixin.flex-between;
+            gap: 1rem;
+
+            h3 {
+                font-size: 18px;
+                color: $color-info;
+            }
+        }
+
+        .navbar_menu {
+            ul {
+                @include mixin.flex-between;
+                list-style: none;
+                font-size: 18px;
+                gap: 3rem;
+
+                li {
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .navbar_button {
+            button {
+                padding: 14px 1.5rem;
+                font-size: 16px;
+                border-radius: 7px;
+                color: $color-white;
+                background-color: $color-info;
+                border: none;
+            }
+        }
+
+        #menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    header {
+        .navbar {
+            @include mixin.flex-between;
+            padding: 2rem 0;
+            width: 99%;
+
+            .logo {
+                @include mixin.flex-between;
+                gap: 1rem;
+                margin-left: 10px;
+                img{
+                    width: 40px;
+                }
+                h3 {
+                    font-size: 15px;
+                    color: $color-info;
+                }
+            }
+
+            .navbar_menu {
+                ul {
+                    @include mixin.flex-between;
+                    list-style: none;
+                    display: none;
+                    font-size: 18px;
+                    gap: 3rem;
+
+                    li {
+                        a {
+                            color: $color-white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .navbar_button {
+                button {
+                    padding: 14px 1.5rem;
+                    font-size: 16px;
+                    border-radius: 7px;
+                    color: $color-white;
+                    background-color: $color-info;
+                    border: none;
+                    display: none;
+                }
+            }
+
+            #menu {
+                display: block;
+                color: $color-white;
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+// ==============================
+// ✅ Responsive Breakpointlar
+// ==============================
+@mixin respond($breakpoint) {
+    @if $breakpoint ==xs {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==sm {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==2xl {
+        @media (max-width: 1536px) {
+            @content;
+        }
+    }
+}
+
+// ==============================
+// 🎯 Flex qisqacha yozish
+// ==============================
+
+@mixin  flexdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// ==============================
+// 📦 Margin & Padding shorthand
+// ==============================
+@mixin p($value) {
+    padding: $value;
+}
+
+@mixin m($value) {
+    margin: $value;
+}
+
+@mixin px($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+
+@mixin py($value) {
+    padding-top: $value;
+    padding-bottom: $value;
+}
+
+// ==============================
+// 🎨 Gradient background
+// ==============================
+@mixin gradient($from, $to, $angle: 135deg) {
+    background: linear-gradient($angle, $from, $to);
+}
+
+// ==============================
+// ⏱️ Transition shorthand
+// ==============================
+@mixin transition($prop: all, $speed: 0.3s, $ease: ease-in-out) {
+    transition: $prop $speed $ease;
+}
+
+// ==============================
+// 💠 Rounded (radius) shortcut
+// ==============================
+@mixin rounded($radius) {
+    border-radius: $radius;
+}
+
+// ==============================
+// 🧊 Box Shadow
+// ==============================
+@mixin shadow($size: md) {
+    @if $size ==sm {
+        box-shadow: $shadow-sm;
+    }
+
+    @else if $size ==md {
+        box-shadow: $shadow-md;
+    }
+
+    @else if $size ==lg {
+        box-shadow: $shadow-lg;
+    }
+}
+
+// ==============================
+// ✂️ Text Truncate (1-line ellipsis)
+// ==============================
+@mixin truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// ==============================
+// 🔘 Button Style
+// ==============================
+@mixin button($bg-color, $text-color: #fff) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $spacing-sm $spacing-md;
+    border: none;
+    border-radius: $radius-md;
+    cursor: pointer;
+    font-size: $font-size-md;
+    @include transition();
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
