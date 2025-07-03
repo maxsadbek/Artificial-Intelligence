@@ -1,0 +1,51 @@
+@use'../variables' as*;
+@use'../mixin';
+
+.Our {
+    @include mixin.flex-between;
+    margin-top: 5rem;
+
+    .Our_box {
+        h2 {
+            font-size: 35px;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 20px;
+            width: 80%;
+        }
+    }
+
+    img {
+        margin-right: -6rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .Our {
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+        width: 93%;
+
+        .Our_box {
+            h2 {
+                font-size: 25px;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                margin-top: 1rem;
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+
+        img {
+            margin-right: 0rem;
+            width: 100%;
+        }
+    }
+}
