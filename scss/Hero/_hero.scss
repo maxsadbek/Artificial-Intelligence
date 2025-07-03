@@ -4,6 +4,9 @@
 .hero {
     margin-top: 4rem;
     @include mixin.flex-between;
+    img{
+        margin-right: -10rem;
+    }
 
     .hero_box {
         h3 {
@@ -94,6 +97,7 @@ button {
         width: 92%;
         img{
             width: 100%;
+            margin-right: 0;
         }
         .hero_box {
             margin-top: 4rem;

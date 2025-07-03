@@ -1,0 +1,38 @@
+@use'../variables' as*;
+@use'../mixin';
+
+.scrolling_icon {
+    margin-top: 4rem;
+    overflow: hidden;
+    padding: 20px 0;
+
+    .scroll_track {
+        display: flex;
+        gap: 50px;
+        width: max-content;
+        animation: scrollIcon 20s linear infinite;
+        align-items: center;
+    }
+
+    img {
+        height: 60px;
+        width: auto;
+        opacity: 0.8;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes scrollIcon {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

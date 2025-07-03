@@ -118,6 +118,9 @@ header .navbar #menu {
   justify-content: space-between;
   align-items: center;
 }
+.hero img {
+  margin-right: -10rem;
+}
 .hero .hero_box h3 {
   font-size: 16px;
   color: #3B82F6;
@@ -192,6 +195,7 @@ button:active {
   }
   .hero img {
     width: 100%;
+    margin-right: 0;
   }
   .hero .hero_box {
     margin-top: 4rem;
@@ -253,6 +257,37 @@ button:active {
   }
   .hero .hero_button .btn1:active {
     transform: translateY(4px);
+  }
+}
+.scrolling_icon {
+  margin-top: 4rem;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.scrolling_icon .scroll_track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scrollIcon 20s linear infinite;
+  align-items: center;
+}
+.scrolling_icon img {
+  height: 60px;
+  width: auto;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+.scrolling_icon img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scrollIcon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
