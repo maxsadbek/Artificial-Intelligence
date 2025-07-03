@@ -112,6 +112,46 @@ header .navbar #menu {
     font-size: 2rem;
   }
 }
+.Apply {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Apply .Apply_box h2 {
+  font-size: 35px;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+.Apply .Apply_box p {
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Apply {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 93%;
+  }
+  .Apply img {
+    width: 100%;
+  }
+  .Apply .Apply_box h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  .Apply .Apply_box p {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+}
 .hero {
   margin-top: 4rem;
   display: flex;
@@ -177,6 +217,12 @@ header .navbar #menu {
 button {
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #3B82F6;
+  color: #FFFFFF;
+  border: none;
 }
 button:hover {
   box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);

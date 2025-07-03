@@ -1,0 +1,47 @@
+@use'../mixin';
+@use'../variables' as*;
+
+.Apply {
+    margin-top: 6rem;
+    @include mixin.flex-between;
+
+    .Apply_box {
+        h2 {
+            font-size: 35px;
+            color: $color-white;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $color-white ;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .Apply {
+        margin-top: 6rem;
+        @include mixin.flex-between;
+        flex-direction: column;
+        width: 93%;
+        img{
+            width: 100%;
+        }
+        .Apply_box {
+            h2 {
+                font-size: 20px;
+                color: $color-white;
+                margin-bottom: 1rem;
+                margin-top: 2rem;
+            }
+
+            p {
+                color: $color-white ;
+                font-size: 15px;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

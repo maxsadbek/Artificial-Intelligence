@@ -77,6 +77,12 @@
 button {
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: $color-info;
+    color: $color-white;
+    border: none;
 
     &:hover {
         box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
