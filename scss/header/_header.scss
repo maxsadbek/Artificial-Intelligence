@@ -40,6 +40,13 @@ header {
                 color: $color-white;
                 background-color: $color-info;
                 border: none;
+                transition: all 0.6s ease;
+
+                &:hover {
+                    box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+                    border-block-color: $color-white;
+                    border-bottom: 3px solid $color-white;
+                }
             }
         }
 
@@ -61,9 +68,11 @@ header {
                 @include mixin.flex-between;
                 gap: 1rem;
                 margin-left: 10px;
-                img{
+
+                img {
                     width: 40px;
                 }
+
                 h3 {
                     font-size: 15px;
                     color: $color-info;

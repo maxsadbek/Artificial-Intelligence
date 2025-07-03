@@ -1,0 +1,170 @@
+@use'../variables' as*;
+@use'../mixin';
+
+.hero {
+    margin-top: 4rem;
+    @include mixin.flex-between;
+
+    .hero_box {
+        h3 {
+            font-size: 16px;
+            color: $color-info;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 49px;
+            color: $color-white;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 18.3px;
+            color: $color-white;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .hero_button {
+        .btn {
+            padding: 14px 19px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: $color-info;
+            border: none;
+            color: $color-white;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+                border-block-color: $color-white;
+                border-bottom: 3px solid $color-white;
+            }
+
+            &:active {
+                transform: translateY(4px);
+            }
+        }
+
+        .btn1 {
+            padding: 14px 19px;
+            font-size: 17px;
+            font-weight: 600;
+            background-color: $color-info;
+            border: none;
+            color: $color-white;
+            border-radius: 6px;
+            margin-left: 1rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+                border-block-color: $color-white;
+                border-bottom: 3px solid $color-white;
+            }
+
+            &:active {
+                transform: translateY(4px);
+            }
+        }
+    }
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+        border-block-color: $color-white;
+        border-bottom: 3px solid $color-white;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .hero {
+        margin-top: 4rem;
+        flex-direction: column-reverse;
+        width: 92%;
+        img{
+            width: 100%;
+        }
+        .hero_box {
+            margin-top: 4rem;
+            h3 {
+                font-size: 16px;
+                color: $color-info;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 20px;
+                color: $color-white;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 13.3px;
+                color: $color-white;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .hero_button {
+            flex-direction: column;
+
+            .btn {
+                padding: 14px 19px;
+                font-size: 17px;
+                font-weight: 600;
+                background-color: $color-info;
+                border: none;
+                color: $color-white;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                width: 70%;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+                    border-block-color: $color-white;
+                    border-bottom: 3px solid $color-white;
+                }
+
+                &:active {
+                    transform: translateY(4px);
+                }
+            }
+
+            .btn1 {
+                padding: 14px 19px;
+                font-size: 17px;
+                font-weight: 600;
+                background-color: $color-info;
+                border: none;
+                color: $color-white;
+                border-radius: 6px;
+                margin-left: 0rem;
+                transition: all 0.3s ease;
+                width: 70%;
+
+                &:hover {
+                    box-shadow: -2px 0px 57px 35px rgba(43, 127, 191, 0.2);
+                    border-block-color: $color-white;
+                    border-bottom: 3px solid $color-white;
+                }
+
+                &:active {
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }
+
+}
